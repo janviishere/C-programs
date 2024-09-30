@@ -1,18 +1,9 @@
-
 #include <stdio.h>
 #include <conio.h>
-
-int main() 
-{
-    int a, b, sum = 0;
+int main() {
   
-      
-    printf("Enter two integers: ");
-    scanf("%d %d", &a, &b);
-
-    sum = a + b;
-
-    printf("Sum: %d", sum);
+    
+    printf("janvi");
 
     return 0;
-}    
+}
