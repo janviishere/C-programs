@@ -1,0 +1,92 @@
+#include <stdio.h>
+#include <conio.h>
+
+int main() 
+{
+    
+    float balance = 0.0; 
+    float transactions[100]; 
+    int transactionCount = 0; 
+    int choice;
+    float amount;
+
+    
+    while (1) 
+    {
+        printf("\nBanking System\n");
+        printf("1. Deposit\n");
+        printf("2. Withdraw\n");
+        printf("3. Check Balance\n");
+        printf("4. View Transaction History\n");
+        printf("5. Exit\n");
+        printf("Enter your choice: ");
+        scanf("%d", &choice);
+
+        
+        switch (choice) 
+        {
+            case 1: 
+                printf("Enter amount to deposit: ");
+                scanf("%f", &amount);
+                if (amount <= 0)
+                {
+                    printf("Invalid deposit amount\n");
+                } 
+                else 
+                {
+                    balance += amount; 
+                    transactions[transactionCount++] = amount; 
+                    printf("Amount deposited successfully\n");
+                }
+                break;
+
+            case 2: 
+                printf("Enter amount to withdraw: ");
+                scanf("%f", &amount);
+                if (amount <= 0)
+                {
+                    printf("Invalid withdrawal amount\n");
+                }
+                else if (amount > balance)
+                {
+                    printf("Insufficient balance\n");
+                } 
+                else
+                {
+                    balance -= amount; 
+                    transactions[transactionCount++] = -amount; 
+                    printf("Amount withdrawn successfully\n");
+                }
+                break;
+
+            case 3: 
+                printf("Current Balance: %.2f\n", balance);
+                break;
+
+            case 4: 
+                printf("Transaction History:\n");
+                for (int i = 0; i < transactionCount; i++) 
+                {
+                    if (transactions[i] > 0)
+                    {
+                        printf("Deposit: %.2f\n", transactions[i]);
+                    } 
+                    else 
+                    {
+                        printf("Withdraw: %.2f\n", -transactions[i]);
+                    }
+                }
+                if (transactionCount == 0)
+                {
+                    printf("No transactions available.\n");
+                }
+                break;
+
+            case 5: 
+                printf("Thank you for using the Banking System\n");
+            default: 
+                printf("Invalid choice Please try again.\n");
+        }
+    }
+}
+
