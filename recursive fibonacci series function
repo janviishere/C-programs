@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <conio.h>
+
+long int fib(long int i)
+{
+     long int recursive;
+     if(i==0||i==1)
+          return (i);
+     else
+          recursive=fib(i-1)+fib(i-2);
+     return(recursive);
+}
+int main()
+{
+     long int recursive,n;
+     int i;
+     printf("/*How Many Terms You Want to \nCalculate in Fibonacci Series*/\n ");
+     printf("\nEnter Limit :\n");
+     scanf("%ld",&n);
+     printf("\n");
+     for(i=0;i<n;i++)
+      {
+          recursive=fib(i);
+          printf("%ld ",recursive);
+}
+}
