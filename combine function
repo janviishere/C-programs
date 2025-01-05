@@ -1,0 +1,50 @@
+#include <stdio.h>
+#include <conio.h>
+
+int main() 
+{
+    
+    int numbers[10];
+    int i, n, sum = 0, evenCount = 0;
+
+    
+    printf("Enter the number of elements (up to 10): ");
+    scanf("%d", &n);
+
+    if (n > 10 || n <= 0) 
+    {
+        printf("Invalid number of elements Exiting\n");
+        return 0; 
+    }
+
+    printf("Enter %d integers:\n", n);
+    for (i = 0; i < n; i++)
+    {
+        scanf("%d", &numbers[i]);
+    }
+
+    
+    for (i = 0; i < n; i++)
+    {
+        if (numbers[i] % 2 == 0) 
+        {
+            evenCount++; 
+        }
+        sum += numbers[i]; 
+    }
+
+    
+    printf("\nTotal numbers entered: %d\n", n);
+    printf("Sum of all numbers: %d\n", sum);
+    printf("Count of even numbers: %d\n", evenCount);
+
+    
+    printf("Even numbers in the array:\n");
+    for (i = 0; i < n; i++) 
+    {
+        if (numbers[i] % 2 == 0) 
+        {
+            printf("%d ", numbers[i]);
+        }
+    }
+}
