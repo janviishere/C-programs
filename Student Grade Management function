@@ -1,0 +1,59 @@
+#include <stdio.h>
+#include <conio.h>
+
+int main()
+{
+    
+    float grades[50];
+    int i, n, passCount = 0;
+    float sum = 0, average;
+
+    
+    printf("Enter the number of students (up to 50): ");
+    scanf("%d", &n);
+
+    if (n <= 0 || n > 50)
+    {
+        printf("Invalid number of student\n");
+        return 0;
+    }
+
+    printf("Enter the grades of %d students (0 to 100):\n", n);
+    for (i = 0; i < n; i++) 
+    {
+        scanf("%f", &grades[i]);
+
+        if (grades[i] < 0 || grades[i] > 100)
+        {
+            printf("Invalid grade entered\n");
+            return 0;
+        }
+    }
+
+    for (i = 0; i < n; i++) 
+    {
+        sum += grades[i];
+        if (grades[i] >= 40) 
+        { 
+            passCount++;
+        }
+    }
+
+    average = sum / n;
+
+    printf("\nSummary Report:\n");
+    printf("Total Students: %d\n", n);
+    printf("Average Grade: %.2f\n", average);
+    printf("Number of Passing Students: %d\n", passCount);
+    printf("Number of Failing Students: %d\n", n - passCount);
+
+    printf("\nGrade Categories:\n");
+    for (i = 0; i < n; i++) {
+        printf("Student %d: Grade = %.2f - ", i + 1, grades[i]);
+        if (grades[i] >= 40) {
+            printf("Pass\n");
+        } else {
+            printf("Fail\n");
+        }
+    }
+}
