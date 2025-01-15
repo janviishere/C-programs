@@ -1,0 +1,50 @@
+//calculator using function
+#include <stdio.h>
+#include <conio.h>
+
+//Decleration of function
+int Add(int a,int b);
+int Sub(int a,int b);
+int Mul(int a,int b);
+int Div(int a,int b);
+
+int Add(int a,int b)//Defination of Add
+{
+    int c;
+    printf("enter the value of a&b");
+    c=a+b;
+    printf("\nAddition =%d",c);
+}
+
+int Sub(int a,int b)//Defination of Sub
+{
+    int d;
+    printf("\nenter the value of a&b");
+    d=a-b;
+    printf("\nSubstraction =%d",d);
+}
+
+int Mul(int a,int b)//Defination of Mul
+{
+    int e;
+    printf("\nenter the value of a&b");
+    e=a*b;
+    printf("\nMultiplication =%d",e);
+}
+
+int Div(int a,int b)//Defination of Div
+{
+    int f;
+    printf("\nenter the value of a&b");
+    f=a%b;
+    printf("\nDivision =%d",f);
+}
+
+int main()
+{
+    Add(2,4);//Actual parameter
+    Sub(2,5);
+    Mul(2,4);
+    Div(2,4);
+    return 0;
+}
