@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <conio.h>
+ 
+void main()
+{
+    float radius, area;
+    printf("Radius of circle = ");
+    scanf("%f", &radius);
+
+    //calculate the area
+    area = 3.14 * radius * radius;
+
+    //display the calculated result
+    printf("Area of circle = %f", area);
+        
+}
