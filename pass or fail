@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include <conio.h>
+
+int main()
+{
+    int marks[6];
+    int i;
+    int pass = 1; 
+
+    // Read marks for six subjects
+    printf("Enter marks for six subjects:\n");
+    for (i = 0; i < 6; i++)
+    {
+        printf("Subject %d: ", i + 1);
+        scanf("%d", &marks[i]);
+
+        // Check if marks are below the passing criteria
+        if (marks[i] < 40)
+        {
+            pass = 0;
+        }
+    }
+
+    // print the result
+    if (pass) 
+    {
+        printf("Result: Pass\n");
+    } 
+    else 
+    {
+        printf("Result: Fail\n");
+    }
+
+    return 0;
+}
