@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <conio.h>
+
+int main()
+{
+
+  int a = 5;
+   int b = 20;
+
+   if (a && b)
+   {
+      printf("Condition is true\n" );
+   }
+	
+   if (a || b)
+   {
+      printf("Condition is true\n" );
+   }
+   
+   a = 0;
+   b = 20;
+	
+   if (a && b)
+   {
+      printf("Condition is true\n" );
+   }
+   else
+  {
+      printf("Condition is not true\n" );
+   }
+	
+   if (!(a && b))
+   {
+      printf("Condition is true\n" );
+   }
+   
+   return 0;	
+}
