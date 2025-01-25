@@ -1,0 +1,23 @@
+
+#include <stdio.h>
+#include <conio.h>
+
+int main()
+{
+    
+     int num1,num2;
+     
+     printf("Enter Two Numbers\n");
+     
+     printf("Enter First Number  : ");
+     scanf("%d", &num1);
+     
+     printf("\nEnter Second Number : ");
+     scanf("%d",&num2);
+     
+     if(num1==num2)
+     {
+          printf("\nNumbers are Equivalent.");
+     }
+     return 0;
+}
