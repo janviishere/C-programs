@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <conio.h>
+
+int main()
+{
+    
+    int radius, height;
+    float volumeCylinder, volumeSphere, volumeCone,PI=3.14159;
+
+    // Input radius and height from the user
+    printf("Enter the radius: ");
+    scanf("%d", &radius);
+    printf("Enter the height: ");
+    scanf("%d", &height);
+
+    // Calculate the volume of the cylinder
+    volumeCylinder = (float)(PI * radius * radius * height);
+
+    // Calculate the volume of the sphere
+    volumeSphere = (float)((4.0 / 3.0) * PI * radius * radius * radius);
+
+    // Calculate the volume of the cone
+    volumeCone = (float)((1.0 / 3.0) * PI * radius * radius * height);
+
+    // print the results
+    printf("Volume of Cylinder: %.2f\n", volumeCylinder);
+    printf("Volume of Sphere: %.2f\n", volumeSphere);
+    printf("Volume of Cone: %.2f\n", volumeCone);
+
+    return 0;
+}
