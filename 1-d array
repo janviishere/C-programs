@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <conio.h>
+void oneDArray()
+{
+    int n, i, sum = 0;
+    printf("Enter the size of the 1D array: ");
+    scanf("%d", &n);
+    
+    int arr[n];
+    printf("Enter %d elements of the array:\n", n);
+    for (i = 0; i < n; i++) 
+    {
+        scanf("%d", &arr[i]);
+        sum += arr[i];
+    }
+
+    printf("The elements of the 1D array are: ");
+    for (i = 0; i < n; i++)
+    {
+        printf("%d ", arr[i]);
+    }
+    printf("\nSum of the 1D array elements: %d\n", sum);
+}
+int main()
+{
+    printf("1D Array :\n");
+    oneDArray();
+}
