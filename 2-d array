@@ -1,0 +1,55 @@
+#include <stdio.h>
+#include <conio.h>
+
+void twoDArray() 
+{
+    int rows, cols, i, j;
+    printf("\nEnter the number of rows and columns for the 2D array: ");
+    scanf("%d %d", &rows, &cols);
+
+    int matrix[rows][cols], transpose[cols][rows];
+    printf("Enter elements of the %dx%d matrix:\n", rows, cols);
+    for (i = 0; i < rows; i++) 
+    {
+        for (j = 0; j < cols; j++) 
+        {
+            scanf("%d", &matrix[i][j]);
+        }
+    }
+
+    printf("The original 2D array (matrix) is:\n");
+    for (i = 0; i < rows; i++)
+    {
+        for (j = 0; j < cols; j++)
+        {
+            printf("%d ", matrix[i][j]);
+        }
+        printf("\n");
+    }
+ // Calculate the transpose
+    for (i = 0; i < rows; i++)
+    {
+        for (j = 0; j < cols; j++) 
+        {
+            transpose[j][i] = matrix[i][j];
+        }
+    }
+
+    printf("The transpose of the 2D array is:\n");
+    for (i = 0; i < cols; i++) 
+    {
+        for (j = 0; j < rows; j++)
+        {
+            printf("%d ", transpose[i][j]);
+        }
+        printf("\n");
+    }
+}
+ int main()
+ {
+      printf("\n2D Array:\n");
+    twoDArray();
+
+    return 0;
+}
+ 
