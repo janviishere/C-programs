@@ -22,7 +22,7 @@ void mult(int x,int y)
 void div(int x,int y)
 {
      float z;
-     z=x/(float)y;
+     z=x/y;
      printf("Division : %.2f\n",z);
 }
 int main()
