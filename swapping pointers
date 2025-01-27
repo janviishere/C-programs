@@ -3,20 +3,20 @@
 #include <conio.h>
 
 // Function to swap two numbers using pointers
-void swap(int *a, int *b)
+void swap(int a, int b)
 {
-    int temp = *a;
-    *a = *b;
-    *b = temp;
+    int temp = a;
+    a = b;
+    b = temp;
 }
 
 // Function to display an array using pointers
-void displayArray(int *arr, int size)
+void displayArray(int arr, int size)
 {
     printf("Array elements are: ");
     for (int i = 0; i < size; i++) 
     {
-        printf("%d ", *(arr + i));
+        printf("%d ", (arr + i));
     }
     printf("\n");
 }
