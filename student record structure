@@ -7,7 +7,7 @@ struct Student
     int rollNumber;
     char name[50];
     float marks;
-};
+}
 
 // Function to display student information
 void displayStudent(struct Student s)
