@@ -1,0 +1,47 @@
+#include <stdio.h>
+struct record {
+    int rollNumber;
+    char name[3];
+    float marks;
+};
+
+int main() {
+    
+    struct record student1,student2,student3;
+
+    
+    printf("roll number: ");
+    scanf("%d", &student1.rollNumber);
+    printf("name: ");
+    scanf("%s", student1.name);
+    printf("marks: ");
+    scanf("%f", &student1.marks);
+    
+    printf("roll number: ");
+    scanf("%d", &student2.rollNumber);
+    printf("name: ");
+    scanf("%s", student2.name);
+    printf("marks: ");
+    scanf("%f", &student2.marks);
+    
+    printf("roll number: ");
+    scanf("%d", &student3.rollNumber);
+    printf("name: ");
+    scanf("%s", student3.name);
+    printf("marks: ");
+    scanf("%f", &student3.marks);
+
+
+    printf("Roll Number: %d\n", student1.rollNumber);
+    printf("Name: %s\n", student1.name);
+    printf("Marks: %.2f\n", student1.marks);
+
+    printf("Roll Number: %d\n", student2.rollNumber);
+    printf("Name: %s\n", student2.name);
+    printf("Marks: %.2f\n", student2.marks);
+    
+    printf("Roll Number: %d\n", student3.rollNumber);
+    printf("Name: %s\n", student3.name);
+    printf("Marks: %.2f\n", student3.marks);
+    return 0;
+}
